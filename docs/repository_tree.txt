@@ -1,0 +1,145 @@
+triangle_poisoning_artifact/
+├── data/
+│   ├── processed/
+│   │   ├── all_results_long.csv
+│   │   ├── combined_laplace_attack_summary.csv
+│   │   ├── file_mapping.csv
+│   │   ├── result_file_index.csv
+│   │   ├── result_schema_summary.csv
+│   │   └── result_summary_by_file.csv
+│   ├── raw_results/
+│   │   ├── ddp/
+│   │   │   ├── gplus_n10000_ddp_phase2_robust.csv
+│   │   │   └── imdb_n10000_ddp_phase2_robust.csv
+│   │   ├── defense/
+│   │   │   ├── logs_all_defense_gplus_n10000_r3_20260611_031107/
+│   │   │   ├── logs_all_defense_gplus_n10000_r3_20260611_101904/
+│   │   │   ├── gplus_ddp_lap_local_inc_defense.csv
+│   │   │   ├── gplus_ddp_lap_scale_inc_defense.csv
+│   │   │   ├── gplus_edgeorient_rr_inc_defense.csv
+│   │   │   ├── gplus_genshuffledp_rr_inc_defense.csv
+│   │   │   ├── gplus_ldp2022_arronens_orig_inc_defense.csv
+│   │   │   ├── gplus_privet_lap_local_inc_defense.csv
+│   │   │   ├── gplus_privet_lap_scale_inc_defense.csv
+│   │   │   └── gplus_tdpvc_rr_inc_defense.csv
+│   │   ├── edge_orient_vldb/
+│   │   │   ├── gplus/
+│   │   │   ├── imdb/
+│   │   │   └── results_edgeorient_rr_strict/
+│   │   ├── genshuffle_dp/
+│   │   │   ├── results_ccs25_shuffle/
+│   │   │   └── results_ccs25_shuffle_rr_fixed/
+│   │   ├── ldp/
+│   │   │   ├── gplus/
+│   │   │   └── imdb/
+│   │   ├── rldp_2024/
+│   │   │   ├── results_laplace_all_attacks_gplus/
+│   │   │   └── results_laplace_all_attacks_imdb/
+│   │   ├── shuffle_dp/
+│   │   │   ├── shuffledp_gplus/
+│   │   │   └── shuffledp_imdb/
+│   │   ├── shuffle_dp_legacy/
+│   │   │   ├── gplus/
+│   │   │   └── imdb/
+│   │   └── tdp_vc_2025/
+│   │       ├── gplus_n10000_tdpvc_results.csv
+│   │       └── imdb_n10000_tdpvc_results.csv
+│   └── README.md
+├── docs/
+│   └── code_index.md
+├── figures/
+│   └── final_panels/
+│       ├── panel_metric_rel_clean.png
+│       ├── panel_metric_rel_true.png
+│       ├── panel_original_data_rel_clean.png
+│       ├── panel_original_data_rel_true.png
+│       ├── panel_post_laplace_decrease_rel_clean.png
+│       ├── panel_post_laplace_decrease_rel_true.png
+│       ├── panel_post_laplace_increase_rel_clean.png
+│       ├── panel_post_laplace_increase_rel_true.png
+│       ├── panel_post_laplace_rel_clean.png
+│       ├── panel_post_laplace_rel_true.png
+│       ├── panel_post_rr_rel_clean.png
+│       └── panel_post_rr_rel_true.png
+├── logs/
+│   └── raw_run_logs.zip
+├── src/
+│   └── cpp/
+│       ├── include/
+│       │   ├── gcem_incl/
+│       │   ├── stats_incl/
+│       │   ├── gcem.hpp
+│       │   ├── README.txt
+│       │   └── stats.hpp
+│       ├── CCS25ShuffleTriangle.cpp
+│       ├── CCS25ShuffleTriangle_fixed_malpairRR.cpp
+│       ├── check_shuffle_original_data_progress.sh
+│       ├── DDP_AnomalyDefense.cpp
+│       ├── DDP_Phase2_Robust.cpp
+│       ├── EdgeOrient_AnomalyDefense.cpp
+│       ├── EdgeOrientDelta_OriginalDecreaseAttack.cpp
+│       ├── EdgeOrientDelta_OriginalIncreaseAttack.cpp
+│       ├── EdgeOrientDelta_TriangleLDP_corrected.cpp
+│       ├── EdgeOrientDelta_TriangleLDP_LaplaceAttack.cpp
+│       ├── EdgeOrientDelta_TriangleLDP_RR_DecreaseAttack.cpp
+│       ├── EdgeOrientDelta_TriangleLDP_RR_IncreaseAttack.cpp
+│       ├── EdgeOrientDelta_TriangleLDP_RRAttack_strict.cpp
+│       ├── GenShuffleDP_AnomalyDefense.cpp
+│       ├── LDP2022_ARROneNS_AnomalyDefense.cpp
+│       ├── MemoryOperation.h
+│       ├── mt19937ar.h
+│       ├── PRIVET_AnomalyDefense.cpp
+│       ├── PRIVET_laplace_attack.cpp
+│       ├── PRIVET_with_attack.cpp
+│       ├── README.md
+│       ├── RobustAnomalyDefenseCommon.hpp
+│       ├── run_all_anomaly_defense_sleep.sh
+│       ├── run_all_laplace_report_attacks.sh
+│       ├── run_all_shuffle_attacks_strict_cpp.sh
+│       ├── run_CCS25ShuffleTriangle_Robustness.sh
+│       ├── run_CCS25ShuffleTriangle_RR_fixed.sh
+│       ├── run_CCS25ShuffleTriangle_RR_fixed_resume_missing.sh
+│       ├── run_DDP_AnomalyDefense.sh
+│       ├── run_DDP_Phase2_Robust.sh
+│       ├── run_EdgeOrient_AnomalyDefense.sh
+│       ├── run_EdgeOrient_RRAttack_strict.sh
+│       ├── run_EdgeOrient_RRAttack_strict_cxx11.sh
+│       ├── run_EdgeOrientDelta_corrected.sh
+│       ├── run_EdgeOrientDelta_laplace_attack.sh
+│       ├── run_EdgeOrientDelta_original_decrease.sh
+│       ├── run_EdgeOrientDelta_original_increase.sh
+│       ├── run_EdgeOrientDelta_rr_decrease_attack.sh
+│       ├── run_EdgeOrientDelta_rr_increase_attack.sh
+│       ├── run_GenShuffleDP_AnomalyDefense.sh
+│       ├── run_gplus_resume_and_imdb_all_laplace_attacks.sh
+│       ├── run_LDP2022_ARROneNS_AnomalyDefense.sh
+│       ├── run_LDP_OrigIncrease_ARROneNS.sh
+│       ├── run_LDP_OrigIncreaseAttack_fullcpp.sh
+│       ├── run_LDP_OrigIncreaseAttack_fullcpp_fixed.sh
+│       ├── run_missing_original_data_attacks.sh
+│       ├── run_PRIVET.sh
+│       ├── run_PRIVET_AnomalyDefense.sh
+│       ├── run_PRIVET_laplace_attack.sh
+│       ├── run_PRIVET_with_attack.sh
+│       ├── run_resume_shuffle_attacks_strict_cpp.sh
+│       ├── run_shuffle_attacks_Gplus_strict_cpp.sh
+│       ├── run_shuffle_attacks_IMDB_strict_cpp.sh
+│       ├── run_shuffle_original_data_attacks_Gplus_quick.sh
+│       ├── run_shuffle_original_data_attacks_IMDB_quick.sh
+│       ├── run_shuffle_original_data_attacks_quick.sh
+│       ├── run_SubgraphShuffle.sh
+│       ├── run_TDP_VC_Attack_TriangleLDP.sh
+│       ├── run_TDPVC_AnomalyDefense.sh
+│       ├── run_TriangleCounting.sh
+│       ├── SubgraphShuffle.cpp
+│       ├── SubgraphShuffle_OriginalDataAttack_strict.cpp
+│       ├── SubgraphShuffle_RRAttack_strict.cpp
+│       ├── SubgraphShuffle_ShuffleAttack_strict.cpp
+│       ├── TDP_VC_Attack.cpp
+│       ├── TDPVC_AnomalyDefense.cpp
+│       ├── TriangleCounting.cpp
+│       ├── TriangleCounting_OrigIncrease_ARROneNS.cpp
+│       └── TriangleCounting_OrigIncreaseAttack.cpp
+├── .gitignore
+├── Makefile
+└── README.md
