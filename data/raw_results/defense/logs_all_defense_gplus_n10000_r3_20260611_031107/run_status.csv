@@ -1,0 +1,7 @@
+experiment,status,start_time,end_time,log_file
+run_DDP_AnomalyDefense,OK,"2026-06-11 03:11:07","2026-06-11 03:14:49","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_DDP_AnomalyDefense.log"
+run_LDP2022_ARROneNS_AnomalyDefense,OK,"2026-06-11 03:14:49","2026-06-11 03:18:44","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_LDP2022_ARROneNS_AnomalyDefense.log"
+run_PRIVET_AnomalyDefense,OK,"2026-06-11 03:18:44","2026-06-11 03:22:25","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_PRIVET_AnomalyDefense.log"
+run_TDPVC_AnomalyDefense,OK,"2026-06-11 03:22:25","2026-06-11 03:26:14","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_TDPVC_AnomalyDefense.log"
+run_EdgeOrient_AnomalyDefense,OK,"2026-06-11 03:26:14","2026-06-11 03:30:10","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_EdgeOrient_AnomalyDefense.log"
+run_GenShuffleDP_AnomalyDefense,OK,"2026-06-11 03:30:10","2026-06-11 03:34:08","../results_anomaly_defense/logs_all_defense_Gplus_n10000_r3_20260611_031107/run_GenShuffleDP_AnomalyDefense.log"

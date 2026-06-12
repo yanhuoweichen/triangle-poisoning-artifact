@@ -1,0 +1,16 @@
+# Build artifacts
+build/
+*.o
+*.d
+*.out
+*.exe
+
+# Local/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+__pycache__/
